@@ -1,0 +1,58 @@
+PODS:
+  - Alamofire (5.0.0)
+  - Alertift (4.1.1)
+  - Cleanse (4.2.4)
+  - ProgressHUD (2.70)
+  - RxCocoa (5.0.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.1):
+    - RxSwift (~> 5)
+  - RxRetroSwift (3.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxSwift (5.0.1)
+  - SVProgressHUD (2.2.5)
+  - SwiftyJSON (5.0.0)
+  - Toast (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Alertift (~> 4.1)
+  - Cleanse
+  - ProgressHUD
+  - RxRetroSwift
+  - SVProgressHUD
+  - SwiftyJSON
+  - Toast (~> 4.0.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Alertift
+    - Cleanse
+    - ProgressHUD
+    - RxCocoa
+    - RxRelay
+    - RxRetroSwift
+    - RxSwift
+    - SVProgressHUD
+    - SwiftyJSON
+    - Toast
+
+SPEC CHECKSUMS:
+  Alamofire: 58ff2bfb8daaacaa233d5c36e37b10a5248f59b1
+  Alertift: 950483ca193717cc8bb508a7dbbe34f4af321daf
+  Cleanse: 65b6c276880f23a324aca9ba8da6a55bede7ad80
+  ProgressHUD: e603e8b8622c47d8818b9fb38b3cfe9d3e7ca421
+  RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
+  RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
+  RxRetroSwift: 498d08fd078ff4bb07c03559679a0e0888060568
+  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+
+PODFILE CHECKSUM: 995a373cc463df36dec38ea11185aecf665a9660
+
+COCOAPODS: 1.8.4
