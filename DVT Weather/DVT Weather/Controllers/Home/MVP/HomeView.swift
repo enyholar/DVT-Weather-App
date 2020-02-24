@@ -8,6 +8,7 @@
 
 import Foundation
 protocol HomeView: BaseView {
-  //  func openListOfAvailableCarScreen()
+    func setDataToView(model:CurrentWeatherResponse)
+    func setValueForForecast(foreCastList : [List])
    
 }

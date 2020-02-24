@@ -15,7 +15,7 @@ import SwiftyJSON
 struct DvtAPIServiceImpl : DvtAPIService {
     
     func currentWeather(lon: String, lat: String, successHandler: @escaping (CurrentWeatherResponse) -> Void, errorHandler: @escaping (Error) -> Void) {
-           let urls: String = "http://api.openweathermap.org/data/2.5/weather?" + "lat=\(lon)" + "&lon=\(lat)" + "&appid=\(AppConstants.APP_ID)"
+        let urls: String = "http://api.openweathermap.org/data/2.5/weather?" + "lat=\(lon)" + "&lon=\(lat)" + "&units=\(AppConstants.METRICS)" + "&appid=\(AppConstants.APP_ID)"
         makeAPIRequest(apiResponseType:CurrentWeatherResponse.self, url: urls, method: .get, params: nil, encoding: JSONEncoding.default, successHandler: successHandler, errorHandler: errorHandler)
     }
     

@@ -21,10 +21,8 @@ let homeView: HomeView
              //   self.loginView.hideLoading()
             }
         
-            if let user = weatherResponse.clouds {
-        
-                
-                    
+            if weatherResponse != nil {
+                self.homeView.setDataToView(model: weatherResponse)
                 } else {
                     //Run on main Thread
                     DispatchQueue.main.async {
@@ -54,9 +52,9 @@ let homeView: HomeView
              //   self.loginView.hideLoading()
             }
         
-            if let user = weatherResponse.city {
+            if let list = weatherResponse.list {
         
-                
+                self.homeView.setValueForForecast(foreCastList: list)
                     
                 } else {
                     //Run on main Thread
@@ -76,6 +74,22 @@ let homeView: HomeView
         }
         
     }
+    
+    func convertToDegree(value:Double) -> Int {
+     let result =  Int(value - 273.15)
+        return result
+    }
+    
+ 
+    
+     func getDayOfWeek(fromDate: Double) -> String {
+          let date = Date(timeIntervalSince1970: fromDate)
+          let dateFormatter = DateFormatter()
+          dateFormatter.dateFormat = "EEEE"
+          let dayOfWeekString = dateFormatter.string(from: date)
+          
+          return dayOfWeekString
+      }
     
 
 func viewDidLoad() {

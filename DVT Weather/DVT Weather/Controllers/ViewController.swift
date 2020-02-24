@@ -10,25 +10,39 @@ import UIKit
 import CoreLocation
 import Alamofire
 import SwiftyJSON
-class ViewController: BaseViewController, CLLocationManagerDelegate{
-    let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
-    lazy var presenter =  HomePresenterImpl(homeRepo: HomeRepository(dvtAPIService: AppConstants.DVT_API_SERVICE), homeView:self )
-      
-       override func getPresenter() -> BasePresenter {
-              return presenter
-          }
+class ViewController: BaseViewController, CLLocationManagerDelegate,UITableViewDelegate, UITableViewDataSource{
     
-    let headers: HTTPHeaders = [
-          .contentType("application/json"),
-          .accept("application/json")
-      ]
-  let locationManager = CLLocationManager()
+    
+    var weatherForecastList :[List] = []
+    
+    lazy var presenter =  HomePresenterImpl(homeRepo: HomeRepository(dvtAPIService: AppConstants.DVT_API_SERVICE), homeView:self )
+    
+    override func getPresenter() -> BasePresenter {
+        return presenter
+    }
+    let locationManager = CLLocationManager()
+    
+    @IBOutlet weak var weatherTableView: UITableView!
+    @IBOutlet weak var lblMinDegree: UILabel!
+    @IBOutlet weak var lblMaxTempDegree: UILabel!
+    @IBOutlet weak var lblCurrentTemp: UILabel!
+    @IBOutlet weak var lblTempDegree: UILabel!
+    @IBOutlet weak var lblWeatherCondition: UILabel!
+    @IBOutlet weak var weatherBackgroundImage: UIImageView!
+    
+    @IBOutlet var weatherView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        weatherTableView.estimatedRowHeight = 100
+        weatherTableView.rowHeight = UITableView.automaticDimension
+        
+        weatherTableView.separatorStyle = .none
+        weatherTableView.dataSource = self
+        weatherTableView.delegate = self
         self.setLocationManager()
     }
     
-
+    
     //TODO:Set up the location manager here.
     func setLocationManager() {
         locationManager.delegate = self
@@ -50,19 +64,60 @@ class ViewController: BaseViewController, CLLocationManagerDelegate{
             
             let latitude = String(location.coordinate.latitude)
             let longitude = String(location.coordinate.longitude)
-            
-            let params : [String : String] = ["lat" : latitude, "lon" : longitude, "appid" : AppConstants.APP_ID]
             presenter.findCurrentWeather(lon: longitude, lat: latitude)
             presenter.fetchForeCastWeather(lon: longitude, lat: latitude)
         }
     }
-
-
-
-
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return weatherForecastList.count
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let model = self.weatherForecastList[indexPath.row]
+        
+        // Dequeue Reusable Cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: AppConstants.FORECAST_CELL_SEGUE_ID, for: indexPath) as! WeatherForecastDayTableViewCell
+        
+        // Configure Cell
+        let weather = model.weather![0]
+        let weatherIcon = WeatherIcon(iconString: weather.icon!)
+        cell.weatherConditionImageView.image = weatherIcon.image
+        cell.weekdayLabel.text = presenter.getDayOfWeek(fromDate: Double(model.dt!))
+        cell.weatherConditionLabel.text = weather.description
+        cell.temperatureLabel.text = "\(presenter.convertToDegree(value: (model.main?.temp)!))°"
+        cell.backgroundColor = UIColor.clear
+        // print (model.weekday)
+        
+        return cell
+    }
+    
+    
+    
 }
 
 extension ViewController: HomeView {
- 
+    func setValueForForecast(foreCastList: [List]) {
+        weatherForecastList = foreCastList
+        weatherTableView.reloadData()
+    }
+    
+    func setDataToView(model: CurrentWeatherResponse) {
+        lblTempDegree.text = "\(presenter.convertToDegree(value: (model.main?.temp)!))°"
+        lblMinDegree.text = "\(presenter.convertToDegree(value: (model.main?.temp_min)!))°"
+        lblCurrentTemp.text = "\(presenter.convertToDegree(value: (model.main?.temp)!))°"
+        lblMaxTempDegree.text = "\(presenter.convertToDegree(value: (model.main?.temp_max)!))°"
+        let weather = model.weather![0]
+        lblWeatherCondition.text = weather.main
+        if weather.main == "Clouds" {
+            weatherBackgroundImage.image = UIImage(named:"forest_cloudy")
+            self.weatherView.backgroundColor = UIColor(hexString: "#54717A")
+            self.weatherTableView.backgroundColor = UIColor(hexString: "#54717A")
+        }
+        
+    }
+    
+    
 }
 

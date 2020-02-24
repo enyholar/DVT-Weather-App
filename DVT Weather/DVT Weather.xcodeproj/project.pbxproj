@@ -44,6 +44,8 @@
 		FBF906392403FC5D0050BBA2 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF906382403FC5D0050BBA2 /* City.swift */; };
 		FBF9063B2403FC6F0050BBA2 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF9063A2403FC6F0050BBA2 /* List.swift */; };
 		FBF9063D2403FC9D0050BBA2 /* ForecastResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF9063C2403FC9D0050BBA2 /* ForecastResponse.swift */; };
+		FBF906402404263F0050BBA2 /* WeatherForecastDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF9063F2404263F0050BBA2 /* WeatherForecastDayTableViewCell.swift */; };
+		FBF90642240431DB0050BBA2 /* WeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF90641240431DB0050BBA2 /* WeatherIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		FBF906382403FC5D0050BBA2 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		FBF9063A2403FC6F0050BBA2 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		FBF9063C2403FC9D0050BBA2 /* ForecastResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastResponse.swift; sourceTree = "<group>"; };
+		FBF9063F2404263F0050BBA2 /* WeatherForecastDayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForecastDayTableViewCell.swift; sourceTree = "<group>"; };
+		FBF90641240431DB0050BBA2 /* WeatherIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,7 @@
 		FB0DB33C2401E817009F3BCE /* DVT Weather */ = {
 			isa = PBXGroup;
 			children = (
+				FBF9063E240426280050BBA2 /* Cell */,
 				FBF90612240236270050BBA2 /* Model */,
 				FBF9060B240235F20050BBA2 /* Base */,
 				FBF906092402349F0050BBA2 /* Controllers */,
@@ -273,6 +278,7 @@
 		FB0DB3802401F91B009F3BCE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				FBF90641240431DB0050BBA2 /* WeatherIcon.swift */,
 				FB0DB3812401F95A009F3BCE /* AppConstants.swift */,
 				FB0DB3822401F95A009F3BCE /* Extensions.swift */,
 			);
@@ -340,6 +346,14 @@
 				FBF9061A240237CF0050BBA2 /* HomePresenterImpl.swift */,
 			);
 			path = MVP;
+			sourceTree = "<group>";
+		};
+		FBF9063E240426280050BBA2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FBF9063F2404263F0050BBA2 /* WeatherForecastDayTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -590,12 +604,14 @@
 				FB0DB3752401F1D5009F3BCE /* DvtAPIService.swift in Sources */,
 				FB0DB3422401E817009F3BCE /* ViewController.swift in Sources */,
 				FBF906372403D6330050BBA2 /* CurrentWeatherResponse.swift in Sources */,
+				FBF906402404263F0050BBA2 /* WeatherForecastDayTableViewCell.swift in Sources */,
 				FBF9063B2403FC6F0050BBA2 /* List.swift in Sources */,
 				FBF906142402365C0050BBA2 /* AlertType.swift in Sources */,
 				FBF906172402379E0050BBA2 /* HomeView.swift in Sources */,
 				FB0DB33E2401E817009F3BCE /* AppDelegate.swift in Sources */,
 				FB0DB3832401F95A009F3BCE /* AppConstants.swift in Sources */,
 				FB0DB3402401E817009F3BCE /* SceneDelegate.swift in Sources */,
+				FBF90642240431DB0050BBA2 /* WeatherIcon.swift in Sources */,
 				FBF9062B2403D5BB0050BBA2 /* Clouds.swift in Sources */,
 				FB0DB37D2401F266009F3BCE /* DvtAppModule.swift in Sources */,
 				FB0DB3792401F22B009F3BCE /* DvtAPIServiceComponent.swift in Sources */,
