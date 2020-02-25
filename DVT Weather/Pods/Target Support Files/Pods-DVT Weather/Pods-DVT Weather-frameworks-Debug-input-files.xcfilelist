@@ -9,4 +9,5 @@ ${BUILT_PRODUCTS_DIR}/RxRetroSwift/RxRetroSwift.framework
 ${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
 ${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${BUILT_PRODUCTS_DIR}/SwipeableTabBarController/SwipeableTabBarController.framework
 ${BUILT_PRODUCTS_DIR}/Toast/Toast.framework

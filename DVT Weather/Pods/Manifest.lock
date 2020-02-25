@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.0.0)
+  - Alamofire (5.0.2)
   - Alertift (4.1.1)
   - Cleanse (4.2.4)
   - ProgressHUD (2.70)
@@ -14,6 +14,7 @@ PODS:
   - RxSwift (5.0.1)
   - SVProgressHUD (2.2.5)
   - SwiftyJSON (5.0.0)
+  - SwipeableTabBarController (3.1.0)
   - Toast (4.0.0)
 
 DEPENDENCIES:
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - RxRetroSwift
   - SVProgressHUD
   - SwiftyJSON
+  - SwipeableTabBarController
   - Toast (~> 4.0.0)
 
 SPEC REPOS:
@@ -38,10 +40,11 @@ SPEC REPOS:
     - RxSwift
     - SVProgressHUD
     - SwiftyJSON
+    - SwipeableTabBarController
     - Toast
 
 SPEC CHECKSUMS:
-  Alamofire: 58ff2bfb8daaacaa233d5c36e37b10a5248f59b1
+  Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
   Alertift: 950483ca193717cc8bb508a7dbbe34f4af321daf
   Cleanse: 65b6c276880f23a324aca9ba8da6a55bede7ad80
   ProgressHUD: e603e8b8622c47d8818b9fb38b3cfe9d3e7ca421
@@ -51,8 +54,9 @@ SPEC CHECKSUMS:
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  SwipeableTabBarController: 49289d4be2af85732deeff88fcf2e6be8d45dd32
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: 995a373cc463df36dec38ea11185aecf665a9660
+PODFILE CHECKSUM: 714bdcc7c8b167b74dae2e553071bc5c5195dcb9
 
 COCOAPODS: 1.8.4

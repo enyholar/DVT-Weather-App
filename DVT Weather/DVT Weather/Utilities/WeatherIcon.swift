@@ -79,4 +79,28 @@ extension WeatherIcon {
         case .default: return #imageLiteral(resourceName: "ClearSkyIcon")
         }
     }
+    
+    var backgroundImage: UIImage {
+        switch self {
+        case .clearSky: return #imageLiteral(resourceName: "forest_sunny")
+        case .fewClouds: return #imageLiteral(resourceName: "sea_cloudy")
+        case .scatteredClouds: return #imageLiteral(resourceName: "sea_cloudy")
+        case .brokenClouds: return #imageLiteral(resourceName: "forest_cloudy")
+        case .showerRain: return #imageLiteral(resourceName: "sea_rainy")
+        case .rain: return #imageLiteral(resourceName: "forest_rainy")
+        case .thunderstorm: return #imageLiteral(resourceName: "sea_rainy")
+        case .snow: return #imageLiteral(resourceName: "sea_rainy")
+        case .mist: return #imageLiteral(resourceName: "forest_rainy")
+        case .clearSkyNight: return #imageLiteral(resourceName: "sea_cloudy")
+        case .fewCloudsNight: return #imageLiteral(resourceName: "sea_sunnypng")
+        case .scatteredCloudsNight: return #imageLiteral(resourceName: "sea_cloudy")
+        case .brokenCloudsNight: return #imageLiteral(resourceName: "forest_cloudy")
+        case .showerRainNight: return #imageLiteral(resourceName: "sea_rainy")
+        case .rainNight: return #imageLiteral(resourceName: "sea_rainy")
+        case .thunderstormNight: return #imageLiteral(resourceName: "forest_rainy")
+        case .snowNight: return #imageLiteral(resourceName: "sea_rainy")
+        case .mistNight: return #imageLiteral(resourceName: "forest_rainy")
+        case .default: return #imageLiteral(resourceName: "forest_sunny")
+        }
+    }
 }

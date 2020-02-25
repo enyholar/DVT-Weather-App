@@ -11,8 +11,7 @@ import CoreLocation
 import Alamofire
 import SwiftyJSON
 class ViewController: BaseViewController, CLLocationManagerDelegate,UITableViewDelegate, UITableViewDataSource{
-    
-    
+    var weather : CurrentWeatherResponse!
     var weatherForecastList :[List] = []
     
     lazy var presenter =  HomePresenterImpl(homeRepo: HomeRepository(dvtAPIService: AppConstants.DVT_API_SERVICE), homeView:self )
@@ -29,8 +28,9 @@ class ViewController: BaseViewController, CLLocationManagerDelegate,UITableViewD
     @IBOutlet weak var lblTempDegree: UILabel!
     @IBOutlet weak var lblWeatherCondition: UILabel!
     @IBOutlet weak var weatherBackgroundImage: UIImageView!
-    
+    @IBOutlet weak var stateNameLbl: UILabel!
     @IBOutlet var weatherView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         weatherTableView.estimatedRowHeight = 100
@@ -39,8 +39,12 @@ class ViewController: BaseViewController, CLLocationManagerDelegate,UITableViewD
         weatherTableView.separatorStyle = .none
         weatherTableView.dataSource = self
         weatherTableView.delegate = self
+        
+        presenter.getWeatherOfflineData()
         self.setLocationManager()
     }
+    
+    
     
     
     //TODO:Set up the location manager here.
@@ -52,6 +56,12 @@ class ViewController: BaseViewController, CLLocationManagerDelegate,UITableViewD
     }
     
     
+    @IBAction func addFavorite(_ sender: Any) {
+        if weather != nil {
+            presenter.addFavoriteWeatherLocation(weatherInfo: weather)
+        }
+        
+    }
     
     //Write the didUpdateLocations method here:
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -88,8 +98,6 @@ class ViewController: BaseViewController, CLLocationManagerDelegate,UITableViewD
         cell.weatherConditionLabel.text = weather.description
         cell.temperatureLabel.text = "\(presenter.convertToDegree(value: (model.main?.temp)!))°"
         cell.backgroundColor = UIColor.clear
-        // print (model.weekday)
-        
         return cell
     }
     
@@ -104,17 +112,19 @@ extension ViewController: HomeView {
     }
     
     func setDataToView(model: CurrentWeatherResponse) {
+        weather = model
+        stateNameLbl.text = model.name
         lblTempDegree.text = "\(presenter.convertToDegree(value: (model.main?.temp)!))°"
         lblMinDegree.text = "\(presenter.convertToDegree(value: (model.main?.temp_min)!))°"
         lblCurrentTemp.text = "\(presenter.convertToDegree(value: (model.main?.temp)!))°"
         lblMaxTempDegree.text = "\(presenter.convertToDegree(value: (model.main?.temp_max)!))°"
         let weather = model.weather![0]
         lblWeatherCondition.text = weather.main
-        if weather.main == "Clouds" {
-            weatherBackgroundImage.image = UIImage(named:"forest_cloudy")
-            self.weatherView.backgroundColor = UIColor(hexString: "#54717A")
-            self.weatherTableView.backgroundColor = UIColor(hexString: "#54717A")
-        }
+        let weatherIcon = WeatherIcon(iconString: weather.icon!)
+        weatherBackgroundImage.image = weatherIcon.backgroundImage
+        let weatherColor = WeatherColor(iconString: weather.icon!)
+        self.weatherView.backgroundColor = weatherColor.backgroundColorForView
+        self.weatherTableView.backgroundColor = weatherColor.backgroundColorForView
         
     }
     

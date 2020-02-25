@@ -58,6 +58,12 @@ class BaseViewController: UIViewController, BaseView {
             .show(on: self)
     }
     
+    func showAlert(message: String,title: String) {
+          Alertift.alert(title: title, message: message)
+              .action(.default("Dismiss"))
+              .show(on: self)
+      }
+    
     func showAlert(message: String, yesAction: @escaping () -> Void) {
         Alertift.alert(title: "", message: message)
             .action(.default("Okay"))

@@ -6,6 +6,7 @@ target 'DVT Weather' do
   use_frameworks!
 
   # Pods for DVT Weather
+pod 'SwipeableTabBarController'
 pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'SVProgressHUD'

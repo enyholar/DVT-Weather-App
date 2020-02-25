@@ -253,6 +253,10 @@ extension Date {
 
 }
 
+extension LosslessStringConvertible {
+    var string: String { .init(self) }
+}
+
 //Get Current DateTime using a certain format string
 func getCurrentDateTime(format: String = "yyyy-MM-dd HH:mm:ss") -> String {
     
