@@ -1,6 +1,6 @@
 //
 //  AppConstants.swift
-//  Ije
+// Dvt Weather
 //
 //  Created by adex on 02/02/2020.
 //  Copyright © 2020 Gideon Oyediran. All rights reserved.

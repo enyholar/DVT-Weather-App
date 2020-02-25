@@ -1,11 +1,10 @@
 //
 //  BaseView.swift
-//  WFM Mobile
+//  DVT Weather
 //
-//  Created by Isaac Iniongun on 10/05/2019.
-//  Copyright © 2019 Crown Interactive. All rights reserved.
+//  Created by adex on 22/02/2020.
+//  Copyright © 2020 Gideon Oyediran. All rights reserved.
 //
-
 import Foundation
 
 protocol BaseView {

@@ -36,6 +36,7 @@
 		FB0DB3842401F95A009F3BCE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0DB3822401F95A009F3BCE /* Extensions.swift */; };
 		FB3E7FE3240570FE00C958E3 /* FavoriteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3E7FE2240570FE00C958E3 /* FavoriteDetailViewController.swift */; };
 		FB3E7FE524057D1C00C958E3 /* WeatherColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3E7FE424057D1C00C958E3 /* WeatherColor.swift */; };
+		FB3E7FE72405A0BC00C958E3 /* HomeRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3E7FE62405A0BC00C958E3 /* HomeRepositoryTest.swift */; };
 		FBF9060F240235F20050BBA2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF9060C240235F20050BBA2 /* BaseViewController.swift */; };
 		FBF90610240235F20050BBA2 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF9060D240235F20050BBA2 /* BasePresenter.swift */; };
 		FBF90611240235F20050BBA2 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF9060E240235F20050BBA2 /* BaseView.swift */; };
@@ -116,6 +117,7 @@
 		FB0DB3822401F95A009F3BCE /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FB3E7FE2240570FE00C958E3 /* FavoriteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteDetailViewController.swift; sourceTree = "<group>"; };
 		FB3E7FE424057D1C00C958E3 /* WeatherColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherColor.swift; sourceTree = "<group>"; };
+		FB3E7FE62405A0BC00C958E3 /* HomeRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepositoryTest.swift; sourceTree = "<group>"; };
 		FBF9060C240235F20050BBA2 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FBF9060D240235F20050BBA2 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		FBF9060E240235F20050BBA2 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 			children = (
 				FB0DB3542401E819009F3BCE /* DVT_WeatherTests.swift */,
 				FB0DB3562401E819009F3BCE /* Info.plist */,
+				FB3E7FE62405A0BC00C958E3 /* HomeRepositoryTest.swift */,
 			);
 			path = "DVT WeatherTests";
 			sourceTree = "<group>";
@@ -685,6 +688,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB3E7FE72405A0BC00C958E3 /* HomeRepositoryTest.swift in Sources */,
 				FB0DB3552401E819009F3BCE /* DVT_WeatherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

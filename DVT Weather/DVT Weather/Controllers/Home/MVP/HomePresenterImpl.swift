@@ -12,6 +12,9 @@ struct HomePresenterImpl: BasePresenter {
     let homeView: HomeView
     let pref = PreferenUtils()
     
+    /**
+    Implementing current weather based on the longitude and latiutude of the user location
+    */
     func findCurrentWeather(lon: String, lat: String){
         
         
@@ -25,11 +28,10 @@ struct HomePresenterImpl: BasePresenter {
             if weatherResponse != nil {
                 self.pref.saveWeather(weather: weatherResponse)
                 self.homeView.setDataToView(model: weatherResponse)
-              //  self.addFavoriteWeatherLocation(weatherInfo: weatherResponse)
+            
             } else {
                 //Run on main Thread
                 DispatchQueue.main.async {
-                    //  self.loginView.showAlert(message: "Unable to login, please try again.")
                 }
             }
             
@@ -38,13 +40,15 @@ struct HomePresenterImpl: BasePresenter {
         }) { (error) in
             //Run on main thread.
             DispatchQueue.main.async {
-                //  self.loginView.hideLoading()
-                //   self.homeView.showFailureAlert(with: error.localizedDescription)
+        
             }
         }
         
     }
     
+    /**
+      Fetching forecast weather the next 5 days based on user location
+       */
     func fetchForeCastWeather(lon: String, lat: String){
         
         
@@ -62,7 +66,6 @@ struct HomePresenterImpl: BasePresenter {
             } else {
                 //Run on main Thread
                 DispatchQueue.main.async {
-                    //  self.loginView.showAlert(message: "Unable to login, please try again.")
                 }
             }
             
@@ -71,12 +74,15 @@ struct HomePresenterImpl: BasePresenter {
         }) { (error) in
             //Run on main thread.
             DispatchQueue.main.async {
-                //  self.loginView.hideLoading()
-                //  self.homeView.showFailureAlert(with: error.localizedDescription)
+              
             }
         }
         
     }
+    
+    /**
+         Fetching foffline saved data and set it to view for display, incase there is network failure
+          */
     
     func getWeatherOfflineData(){
         let weatherForeCastData = pref.getWeatherforeCast()
@@ -90,6 +96,10 @@ struct HomePresenterImpl: BasePresenter {
         }
         
     }
+    
+    /**
+     implementing favorite for particular location and storing data to Nuserdefault
+          */
     
     func addFavoriteWeatherLocation(weatherInfo: CurrentWeatherResponse){
         var favoriteWeatherList :[CurrentWeatherResponse] = []
@@ -110,10 +120,17 @@ struct HomePresenterImpl: BasePresenter {
         
     }
     
+    /**
+         Covert faherenhit to degree celcius
+          */
     func convertToDegree(value:Double) -> Int {
         let result =  Int(value - 273.15)
         return result
     }
+    
+    /**
+         converting number to day of the week for better user experience
+           */
     
     func getDayOfWeek(fromDate: Double) -> String {
         let date = Date(timeIntervalSince1970: fromDate)

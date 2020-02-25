@@ -63,7 +63,7 @@ class ViewController: BaseViewController, CLLocationManagerDelegate,UITableViewD
         
     }
     
-    //Write the didUpdateLocations method here:
+    // didUpdateLocations method here:
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[locations.count - 1]
         if location.horizontalAccuracy > 0 {
@@ -106,11 +106,18 @@ class ViewController: BaseViewController, CLLocationManagerDelegate,UITableViewD
 }
 
 extension ViewController: HomeView {
+    
+    /**
+          Setting forecast weather data to the table view from display
+           */
     func setValueForForecast(foreCastList: [List]) {
         weatherForecastList = foreCastList
         weatherTableView.reloadData()
     }
     
+    /**
+         Setting data from presenter class retrieve from API to view
+           */
     func setDataToView(model: CurrentWeatherResponse) {
         weather = model
         stateNameLbl.text = model.name

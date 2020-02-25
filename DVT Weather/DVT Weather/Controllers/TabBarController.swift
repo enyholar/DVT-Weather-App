@@ -17,11 +17,6 @@ class TabBarController: SwipeableTabBarController {
         if let viewControllers = viewControllers {
             selectedViewController = viewControllers[0]
         }
-//        if #available(iOS 11.0, *) {
-//            view.backgroundColor = UIColor(named: "mainColor")
-//        } else {
-//            // Fallback on earlier versions
-//        }
 //        UITabBar.appearance().barTintColor = UIColor.black // your color
         
         /// Set the animation type for swipe

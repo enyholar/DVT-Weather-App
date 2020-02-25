@@ -30,6 +30,10 @@ struct FavoritePresenter: BasePresenter {
     
     let favoriteView: FavoriteView
     let pref = PreferenUtils()
+    
+    /**
+         Retrieve stored favorite weather location data
+           */
     func addFavoriteWeatherLocation(){
         var favoriteWeatherList :[CurrentWeatherResponse] = []
         let favoriList = pref.getFavoriteWeatherLocation()

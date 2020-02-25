@@ -1,9 +1,8 @@
 //
-//  YouthPartyAPIServiceImpl.swift
-//  Youth Party
+//  DvtAPIServiceImpl.swift
 //
-//  Created by adex on 30/01/2020.
-//  Copyright © 2020 adex. All rights reserved.
+//  Created by adex on 22/02/2020.
+//  Copyright © 2020 Gideon Oyediran. All rights reserved.
 //
 
 import Foundation
@@ -13,12 +12,13 @@ import RxCocoa
 import Alamofire
 import SwiftyJSON
 struct DvtAPIServiceImpl : DvtAPIService {
-    
+     //MARK: - service implementation of fetching current weather information
     func currentWeather(lon: String, lat: String, successHandler: @escaping (CurrentWeatherResponse) -> Void, errorHandler: @escaping (Error) -> Void) {
         let urls: String = "http://api.openweathermap.org/data/2.5/weather?" + "lat=\(lon)" + "&lon=\(lat)" + "&units=\(AppConstants.METRICS)" + "&appid=\(AppConstants.APP_ID)"
         makeAPIRequest(apiResponseType:CurrentWeatherResponse.self, url: urls, method: .get, params: nil, encoding: JSONEncoding.default, successHandler: successHandler, errorHandler: errorHandler)
     }
     
+     //MARK: - service implementation of fetching forecast weather information
     func forecastWeather(lon: String, lat: String, successHandler: @escaping (ForecastResponse) -> Void, errorHandler: @escaping (Error) -> Void) {
               let urls: String = "http://api.openweathermap.org/data/2.5/forecast?" + "lat=\(lon)" + "&lon=\(lat)" + "&appid=\(AppConstants.APP_ID)"
            makeAPIRequest(apiResponseType:ForecastResponse.self, url: urls, method: .get, params: nil, encoding: JSONEncoding.default, successHandler: successHandler, errorHandler: errorHandler)

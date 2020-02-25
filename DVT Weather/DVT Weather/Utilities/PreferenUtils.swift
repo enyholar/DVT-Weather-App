@@ -1,9 +1,9 @@
 //
 //  PreferenUtils.swift
-//  MyrideRider
+//  DVT Weather
 //
-//  Created by adex on 30/09/2019.
-//  Copyright © 2019 adex. All rights reserved.
+//  Created by adex on 25/02/2020.
+//  Copyright © 2020 Gideon Oyediran. All rights reserved.
 //
 
 import Foundation

@@ -1,10 +1,11 @@
 //
 //  ForecastDayTableViewCell.swift
-//  WeatherSando
+//  DVT Weather
 //
-//  Created by Saruhan Köle on 2.12.2018.
-//  Copyright © 2018 Saruhan Köle. All rights reserved.
+//  Created by adex on 25/02/2020.
+//  Copyright © 2020 Gideon Oyediran. All rights reserved.
 //
+
 
 import UIKit
 

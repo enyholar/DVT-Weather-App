@@ -1,9 +1,8 @@
 //
 //  BaseViewController.swift
-//  WFM Mobile
 //
-//  Created by Isaac Iniongun on 10/05/2019.
-//  Copyright © 2019 Crown Interactive. All rights reserved.
+//  Created by adex on 23/02/2020.
+//  Copyright © 2020 Gideon Oyediran. All rights reserved.
 //
 
 import UIKit
