@@ -20,6 +20,20 @@ struct Main : Codable {
 	let pressure : Int?
 	let feels_like : Double?
 
+    init( humidity : Int?,
+     temp_max : Double?,
+     temp_min : Double?,
+     temp : Double?,
+     pressure : Int?,
+     feels_like : Double?) {
+        self.humidity = humidity
+        self.temp_max = temp_max
+        self.temp_min = temp_min
+        self.temp = temp
+        self.pressure = pressure
+        self.feels_like = feels_like
+    }
+
 	enum CodingKeys: String, CodingKey {
 
 		case humidity = "humidity"

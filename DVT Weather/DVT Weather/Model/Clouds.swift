@@ -15,6 +15,9 @@ import Foundation
 struct Clouds : Codable {
 	let all : Int?
 
+    init(all : Int?) {
+          self.all = all
+      }
 	enum CodingKeys: String, CodingKey {
 
 		case all = "all"

@@ -19,6 +19,18 @@ struct Sys : Codable {
 	let sunrise : Int?
 	let id : Int?
 
+    init(type : Int?,
+     country : String?,
+     sunset : Int?,
+     sunrise : Int?,
+     id : Int?) {
+        self.type = type
+        self.country = country
+        self.sunset = sunset
+        self.sunrise = sunrise
+        self.id = id
+    }
+
 	enum CodingKeys: String, CodingKey {
 
 		case type = "type"

@@ -10,6 +10,7 @@
 		09BE8C5BD55F8BE61C8135CD /* Pods_DVT_WeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB36D0D8EED77902263522B4 /* Pods_DVT_WeatherTests.framework */; };
 		8C8317D4C0AA539E5C5FE1E3 /* Pods_DVT_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F902FCEB4E6F5237603B998 /* Pods_DVT_Weather.framework */; };
 		F375A2F5F85C824D1220BBB7 /* Pods_DVT_Weather_DVT_WeatherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03564FFF2358D642607F7355 /* Pods_DVT_Weather_DVT_WeatherUITests.framework */; };
+		FB01E22C2406AB020058DEAC /* DvtAPIServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB01E22B2406AB020058DEAC /* DvtAPIServiceMock.swift */; };
 		FB06773F2405100C004BF38E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06773E2405100C004BF38E /* TabBarController.swift */; };
 		FB06774224051608004BF38E /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB06774124051608004BF38E /* FavouriteViewController.swift */; };
 		FB0677442405227E004BF38E /* PreferenUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0677432405227E004BF38E /* PreferenUtils.swift */; };
@@ -85,6 +86,7 @@
 		AB36D0D8EED77902263522B4 /* Pods_DVT_WeatherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DVT_WeatherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B364E97F5E879E84DEC36315 /* Pods-DVT Weather-DVT WeatherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVT Weather-DVT WeatherUITests.release.xcconfig"; path = "Target Support Files/Pods-DVT Weather-DVT WeatherUITests/Pods-DVT Weather-DVT WeatherUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BFA07C1F2BDC0B3F5B05942C /* Pods-DVT Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DVT Weather.release.xcconfig"; path = "Target Support Files/Pods-DVT Weather/Pods-DVT Weather.release.xcconfig"; sourceTree = "<group>"; };
+		FB01E22B2406AB020058DEAC /* DvtAPIServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DvtAPIServiceMock.swift; sourceTree = "<group>"; };
 		FB06773E2405100C004BF38E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FB06774124051608004BF38E /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		FB0677432405227E004BF38E /* PreferenUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenUtils.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				FB0DB3542401E819009F3BCE /* DVT_WeatherTests.swift */,
+				FB01E22B2406AB020058DEAC /* DvtAPIServiceMock.swift */,
 				FB0DB3562401E819009F3BCE /* Info.plist */,
 				FB3E7FE62405A0BC00C958E3 /* HomeRepositoryTest.swift */,
 			);
@@ -689,6 +692,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB3E7FE72405A0BC00C958E3 /* HomeRepositoryTest.swift in Sources */,
+				FB01E22C2406AB020058DEAC /* DvtAPIServiceMock.swift in Sources */,
 				FB0DB3552401E819009F3BCE /* DVT_WeatherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -856,6 +860,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J32777W5AS;
 				INFOPLIST_FILE = "DVT Weather/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -874,6 +879,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J32777W5AS;
 				INFOPLIST_FILE = "DVT Weather/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

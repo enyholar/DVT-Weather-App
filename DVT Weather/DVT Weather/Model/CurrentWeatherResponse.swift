@@ -27,6 +27,23 @@ struct CurrentWeatherResponse : Codable {
 	let clouds : Clouds?
 	let coord : Coord?
 
+    
+    init( id : Int?, main : Main?, name : String?, timezone : Int?, sys : Sys?, visibility : Int?, wind : Wind?, dt : Int?, base : String?, weather : [Weather]?, cod : Int?, clouds : Clouds?, coord : Coord?) {
+         self.id = id
+         self.main = main
+         self.name = name
+         self.timezone = timezone
+         self.sys = sys
+         self.visibility = visibility
+         self.wind = wind
+         self.dt = dt
+         self.base = base
+         self.weather = weather
+         self.cod = cod
+         self.clouds = clouds
+         self.coord = coord
+     }
+    
 	enum CodingKeys: String, CodingKey {
 
 		case id = "id"

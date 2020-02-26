@@ -119,7 +119,7 @@
             </objects>
             <point key="canvasLocation" x="1115.9420289855072" y="796.46739130434787"/>
         </scene>
-        <!--View Controller-->
+        <!--Weather-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DVT_Weather" customModuleProvider="target" sceneMemberID="viewController">
@@ -315,8 +315,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="k3e-mx-8os">
-                        <barButtonItem key="rightBarButtonItem" title="Add Favorite" id="ywT-5o-6ii">
+                    <navigationItem key="navigationItem" title="Weather" id="k3e-mx-8os">
+                        <barButtonItem key="rightBarButtonItem" title="Add Favorite" image="star" id="ywT-5o-6ii">
                             <color key="tintColor" red="0.55294117649999996" green="0.77647058820000003" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="addFavorite:" destination="BYZ-38-t0r" id="5E1-6X-Jg1"/>
@@ -339,11 +339,11 @@
             </objects>
             <point key="canvasLocation" x="210.1449275362319" y="43.206521739130437"/>
         </scene>
-        <!--Home-->
+        <!--Navigation Controller-->
         <scene sceneID="W3f-a0-oYF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bxe-S6-QZa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="pWM-cb-arT"/>
+                    <tabBarItem key="tabBarItem" title="" image="ShowerRainIcon" id="pWM-cb-arT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tm7-Cz-k6z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -358,11 +358,11 @@
             </objects>
             <point key="canvasLocation" x="-697.10144927536237" y="43.206521739130437"/>
         </scene>
-        <!--Favourite-->
+        <!--Navigation Controller-->
         <scene sceneID="FVJ-50-cwE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2yS-91-GFf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favourite" id="fdz-Ct-8EF"/>
+                    <tabBarItem key="tabBarItem" title="" image="star" id="fdz-Ct-8EF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jPS-At-3Rk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -377,7 +377,7 @@
             </objects>
             <point key="canvasLocation" x="208.69565217391306" y="796.46739130434787"/>
         </scene>
-        <!--Favorite Detail View Controller-->
+        <!--Favorite-->
         <scene sceneID="FNB-B7-Zwn">
             <objects>
                 <viewController storyboardIdentifier="favoriteDetailVc" id="nbh-cb-Bc5" customClass="FavoriteDetailViewController" customModule="DVT_Weather" customModuleProvider="target" sceneMemberID="viewController">
@@ -573,7 +573,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6UO-Xu-QTH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SEF-SD-rkg"/>
+                    <navigationItem key="navigationItem" title="Favorite" id="SEF-SD-rkg"/>
                     <connections>
                         <outlet property="lblCurrentTemp" destination="D2B-pQ-8qv" id="X8K-lZ-hqz"/>
                         <outlet property="lblMaxTempDegree" destination="ouE-cu-dX0" id="dde-6V-wl9"/>
@@ -598,6 +598,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XUY-Q9-ogV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -609,4 +612,8 @@
             <point key="canvasLocation" x="1489.8550724637682" y="42.391304347826093"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ShowerRainIcon" width="100" height="100"/>
+        <image name="star" width="32" height="32"/>
+    </resources>
 </document>

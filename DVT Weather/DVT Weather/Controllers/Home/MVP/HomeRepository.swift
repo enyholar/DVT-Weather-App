@@ -12,7 +12,6 @@ import RxRetroSwift
 struct HomeRepository {
     let dvtAPIService: DvtAPIService
     
-    
      func fetchCurrentWeather( lon: String,lat: String, successHandler: @escaping (CurrentWeatherResponse) -> Void, errorHandler: @escaping (Error) -> Void) {
         return dvtAPIService.currentWeather(lon: lon, lat: lat, successHandler: successHandler, errorHandler: errorHandler)
       }

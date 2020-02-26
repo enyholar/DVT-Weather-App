@@ -22,6 +22,25 @@ struct City : Codable {
 	let sunrise : Int?
 	let sunset : Int?
 
+    init( id : Int?,
+       name : String?,
+       coord : Coord?,
+       country : String?,
+       population : Int?,
+       timezone : Int?,
+       sunrise : Int?,
+       sunset : Int?) {
+          self.name = name
+          self.id = id
+          self.coord = coord
+          self.country = country
+          self.population = population
+          self.timezone = timezone
+          self.sunrise = sunrise
+          self.sunset = sunset
+      }
+    
+    
 	enum CodingKeys: String, CodingKey {
 
 		case id = "id"

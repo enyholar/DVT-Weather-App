@@ -16,6 +16,12 @@ struct Coord : Codable {
 	let lat : Double?
 	let lon : Double?
 
+    init( lat : Double?,
+        lon : Double?) {
+           self.lat = lat
+           self.lon = lon
+       }
+    
 	enum CodingKeys: String, CodingKey {
 
 		case lat = "lat"

@@ -21,6 +21,23 @@ struct List : Codable {
 	let sys : Sys?
 	let dt_txt : String?
 
+    init( dt : Int?,
+     main : Main?,
+     weather : [Weather]?,
+     clouds : Clouds?,
+     wind : Wind?,
+     sys : Sys?,
+     dt_txt : String?) {
+        self.dt = dt
+        self.main = main
+        self.weather = weather
+        self.clouds = clouds
+        self.wind = wind
+        self.sys = sys
+        self.dt_txt = dt_txt
+    }
+
+    
 	enum CodingKeys: String, CodingKey {
 
 		case dt = "dt"

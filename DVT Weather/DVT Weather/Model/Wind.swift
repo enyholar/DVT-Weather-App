@@ -16,6 +16,12 @@ struct Wind : Codable {
 	let deg : Int?
 	let speed : Double?
 
+    init(deg : Int?,
+        speed : Double?) {
+           self.deg = deg
+           self.speed = speed
+       }
+    
 	enum CodingKeys: String, CodingKey {
 
 		case deg = "deg"

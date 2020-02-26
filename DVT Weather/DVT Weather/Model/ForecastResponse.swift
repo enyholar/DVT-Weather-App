@@ -19,6 +19,19 @@ struct ForecastResponse : Codable {
 	let list : [List]?
 	let city : City?
 
+    init( cod : String?,
+     message : Int?,
+     cnt : Int?,
+     list : [List]?,
+     city : City?) {
+        self.cod = cod
+        self.message = message
+        self.cnt = cnt
+        self.list = list
+        self.city = city
+    }
+    
+    
 	enum CodingKeys: String, CodingKey {
 
 		case cod = "cod"
