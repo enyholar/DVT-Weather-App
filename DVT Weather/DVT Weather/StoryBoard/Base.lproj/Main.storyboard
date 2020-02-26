@@ -39,7 +39,7 @@
             </objects>
             <point key="canvasLocation" x="-2242" y="196"/>
         </scene>
-        <!--Favourite View Controller-->
+        <!--Favorite-->
         <scene sceneID="w2g-ta-7cP">
             <objects>
                 <viewController storyboardIdentifier="favVc" id="20t-2g-Rzv" customClass="FavouriteViewController" customModule="DVT_Weather" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,7 +110,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1Ls-lZ-LbA"/>
                     </view>
-                    <navigationItem key="navigationItem" id="XUX-bw-WNQ"/>
+                    <navigationItem key="navigationItem" title="Favorite" id="XUX-bw-WNQ"/>
                     <connections>
                         <outlet property="favouriteLocationTableView" destination="cmJ-J3-duO" id="1O8-dN-T4Y"/>
                     </connections>
@@ -343,7 +343,7 @@
         <scene sceneID="W3f-a0-oYF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bxe-S6-QZa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="ShowerRainIcon" id="pWM-cb-arT"/>
+                    <tabBarItem key="tabBarItem" title="" image="sun-icon" id="pWM-cb-arT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tm7-Cz-k6z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -599,7 +599,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -613,7 +616,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ShowerRainIcon" width="100" height="100"/>
         <image name="star" width="32" height="32"/>
+        <image name="sun-icon" width="32" height="32"/>
     </resources>
 </document>
